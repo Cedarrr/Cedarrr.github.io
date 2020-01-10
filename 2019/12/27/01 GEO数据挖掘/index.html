@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | Cedar&#39;s blog</title>
+  <title>GEO数据挖掘 | Cedar&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="java, bioinformatics, python">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Cedar&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="CONTENT [TOC] 01 通用文献阅读及规律02 了解GEO数据库- 03 数据下载的3种方式 – 得到表达矩阵由于R语言版本高于3.5，需要用新的方式安装GEOquery 123456789101112131415if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))    install.packages(&quot;BiocManager&quot;)">
+<meta name="keywords" content="bioinformatics,流程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GEO数据挖掘">
+<meta property="og:url" content="http://yoursite.com/2019/12/27/01 GEO数据挖掘/index.html">
 <meta property="og:site_name" content="Cedar&#39;s blog">
+<meta property="og:description" content="CONTENT [TOC] 01 通用文献阅读及规律02 了解GEO数据库- 03 数据下载的3种方式 – 得到表达矩阵由于R语言版本高于3.5，需要用新的方式安装GEOquery 123456789101112131415if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))    install.packages(&quot;BiocManager&quot;)">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-01-10T20:02:26.483Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cedar&#39;s blog">
+<meta name="twitter:title" content="GEO数据挖掘">
+<meta name="twitter:description" content="CONTENT [TOC] 01 通用文献阅读及规律02 了解GEO数据库- 03 数据下载的3种方式 – 得到表达矩阵由于R语言版本高于3.5，需要用新的方式安装GEOquery 123456789101112131415if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))    install.packages(&quot;BiocManager&quot;)">
   
     <link rel="alternative" href="/atom.xml" title="Cedar&#39;s blog" type="application/atom+xml">
   
@@ -129,36 +133,50 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-01 GEO数据挖掘" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/27/01 GEO数据挖掘/" class="archive-article-date">
-  	<time datetime="2019-12-27T20:40:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-27</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/27/01 GEO数据挖掘/">GEO数据挖掘</a>
+    <h1 class="article-title" itemprop="name">
+      GEO数据挖掘
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/12/27/01 GEO数据挖掘/" class="archive-article-date">
+  	<time datetime="2019-12-27T20:40:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>CONTENT</strong></p>
+<p>[TOC]</p>
+<h1 id="01-通用文献阅读及规律"><a href="#01-通用文献阅读及规律" class="headerlink" title="01 通用文献阅读及规律"></a>01 通用文献阅读及规律</h1><h1 id="02-了解GEO数据库"><a href="#02-了解GEO数据库" class="headerlink" title="02 了解GEO数据库"></a>02 了解GEO数据库</h1><p>-</p>
+<h1 id="03-数据下载的3种方式-–-得到表达矩阵"><a href="#03-数据下载的3种方式-–-得到表达矩阵" class="headerlink" title="03 数据下载的3种方式 – 得到表达矩阵"></a>03 数据下载的3种方式 – 得到表达矩阵</h1><p>由于R语言版本高于3.5，需要用新的方式安装GEOquery</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!requireNamespace(<span class="string">"BiocManager"</span>, quietly = <span class="literal">TRUE</span>))</span><br><span class="line">    install.packages(<span class="string">"BiocManager"</span>)</span><br><span class="line">BiocManager::install(version = <span class="string">"3.10"</span>)</span><br><span class="line">biocManager(<span class="string">"GEOquery"</span>)</span><br><span class="line"></span><br><span class="line">&gt; eSet&lt;-getGEO(<span class="string">"GSE42872"</span>,</span><br><span class="line">+ destdir=<span class="string">"."</span>, <span class="comment">#下载在当前目录</span></span><br><span class="line">+ getGPL=<span class="literal">F</span>,   <span class="comment"># 平台信息不要</span></span><br><span class="line">+ AnnotGPL=<span class="literal">F</span>) <span class="comment"># 注释不要</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#读取下载的GSE	</span></span><br><span class="line"><span class="comment">#在写这些参数前，可以先打开文件看看档案具体内容，看看里面是怎么分配的</span></span><br><span class="line">a=read.table(<span class="string">"GSE42872_series_matrix.txt.gz"</span>,</span><br><span class="line">             sep=<span class="string">"\t"</span>,quote=<span class="string">""</span>,fill=<span class="literal">T</span>，</span><br><span class="line">             comment.char=<span class="string">"!"</span>，header=<span class="literal">T</span>) <span class="comment"># 不要注释信息, 去掉头行</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>用GEOquery从GEO数据库下载数据：<a href="http://www.bio-info-trainee.com/bioconductor_China/software/GEOquery.html" target="_blank" rel="noopener">http://www.bio-info-trainee.com/bioconductor_China/software/GEOquery.html</a></li>
+</ul>
+<h1 id="04-ID转换技巧大全"><a href="#04-ID转换技巧大全" class="headerlink" title="04 ID转换技巧大全"></a>04 ID转换技巧大全</h1><h1 id="05-了解你的表达矩阵"><a href="#05-了解你的表达矩阵" class="headerlink" title="05 了解你的表达矩阵"></a>05 了解你的表达矩阵</h1><h1 id="06-差异分析"><a href="#06-差异分析" class="headerlink" title="06 差异分析"></a>06 差异分析</h1><h1 id="07-火山图及热图制作及美化"><a href="#07-火山图及热图制作及美化" class="headerlink" title="07 火山图及热图制作及美化"></a>07 火山图及热图制作及美化</h1><h1 id="08-KEGG-GO等数据库的注释及GSEA分析"><a href="#08-KEGG-GO等数据库的注释及GSEA分析" class="headerlink" title="08 KEGG-GO等数据库的注释及GSEA分析"></a>08 KEGG-GO等数据库的注释及GSEA分析</h1><h1 id="09-收尾的几点建议"><a href="#09-收尾的几点建议" class="headerlink" title="09 收尾的几点建议"></a>09 收尾的几点建议</h1><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
+<li>R来完成表达芯片分析全流程：<a href="http://www.bio-info-trainee.com/2087.html" target="_blank" rel="noopener">http://www.bio-info-trainee.com/2087.html</a></li>
+<li>生信人的20个语言练习题： <a href="http://www.bio-info-trainee.com/3409.html" target="_blank" rel="noopener">http://www.bio-info-trainee.com/3409.html</a></li>
+<li>生信人的20个R语言练习题答案：<a href="http://www.bio-info-trainee.com/3415.html" target="_blank" rel="noopener">http://www.bio-info-trainee.com/3415.html</a></li>
+<li>生信人的linux考试： <a href="http://www.bio-info-trainee.com/2900.html" target="_blank" rel="noopener">http://www.bio-info-trainee.com/2900.html</a></li>
+<li>视频笔记：<a href="https://www.jianshu.com/p/8dd7dc1e1719" target="_blank" rel="noopener">https://www.jianshu.com/p/8dd7dc1e1719</a></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -174,57 +192,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/27/01 GEO数据挖掘/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/27/markdown基础语法/" class="archive-article-date">
-  	<time datetime="2019-12-27T20:40:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-27</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/12/27/markdown基础语法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">markdown基础语法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/27/markdown基础语法/">markdown基础语法</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">语法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -247,8 +314,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
