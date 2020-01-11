@@ -13,11 +13,11 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
-<meta name="description" content="GEO数据挖掘"><meta name="keywords" content="java, bioinformatics, python"><link rel="alternate" href="/default" title="Cedar's blog"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.11.0">
-<link rel="canonical" href="http://yoursite.com/2019/12/27/01 GEO数据挖掘/">
+<meta name="description" content="GEO数据挖掘的基本流程"><meta name="keywords" content="java, bioinformatics, python"><link rel="alternate" href="/Cedarrr.github.io/atom.xml" title="Cedar's blog"><link rel="shortcut icon" type="image/x-icon" href="/Cedarrr.github.io/icon2.png?v=2.11.0">
+<link rel="canonical" href="https://cedarrr.github.io/Cedarrr.github.io/2020/01/10/01 GEO数据挖掘/">
 
-<link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css">
-<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.11.0">
+<link rel="stylesheet" type="text/css" href="/Cedarrr.github.io/lib/fancybox/jquery.fancybox.css">
+<link rel="stylesheet" type="text/css" href="/Cedarrr.github.io/css/style.css?v=2.11.0">
 
 <script id="baidu_push">
 (function(){
@@ -42,7 +42,7 @@
 
   <body><div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/." class="logo">Cedar's blog</a>
+    <a href="/Cedarrr.github.io/." class="logo">Cedar's blog</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -52,19 +52,27 @@
 </div>
 
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list"><a href="/">
+  <ul class="mobile-menu-list"><a href="/Cedarrr.github.io/">
         <li class="mobile-menu-item">Home
+          </li>
+      </a><a href="/Cedarrr.github.io/tags/">
+        <li class="mobile-menu-item">Tags
           </li>
       </a></ul>
 </nav>
 <div class="container" id="mobile-panel">
       <header id="header" class="header"><div class="logo-wrapper">
-  <a href="/." class="logo">Cedar's blog</a>
+  <a href="/Cedarrr.github.io/." class="logo">Cedar's blog</a>
 </div>
 
 <nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item">
-          <a class="menu-item-link" href="/">
+          <a class="menu-item-link" href="/Cedarrr.github.io/">
             Home
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/Cedarrr.github.io/tags/">
+            Tags
             </a>
         </li>
       </ul></nav>
@@ -79,7 +87,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          2019-12-27
+          2020-01-10
         </span></div>
     </header>
 
@@ -88,9 +96,7 @@
     <div class="post-toc-content">
       <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#01-通用文献阅读及规律"><span class="toc-text">01 通用文献阅读及规律</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#02-了解GEO数据库"><span class="toc-text">02 了解GEO数据库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#03-数据下载的3种方式-–-得到表达矩阵"><span class="toc-text">03 数据下载的3种方式 – 得到表达矩阵</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#04-ID转换技巧大全"><span class="toc-text">04 ID转换技巧大全</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#05-了解你的表达矩阵"><span class="toc-text">05 了解你的表达矩阵</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#06-差异分析"><span class="toc-text">06 差异分析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#07-火山图及热图制作及美化"><span class="toc-text">07 火山图及热图制作及美化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#08-KEGG-GO等数据库的注释及GSEA分析"><span class="toc-text">08 KEGG-GO等数据库的注释及GSEA分析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#09-收尾的几点建议"><span class="toc-text">09 收尾的几点建议</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#备注"><span class="toc-text">备注</span></a></li></ol>
     </div>
-  </div><div class="post-content"><p><strong>CONTENT</strong><br>[toc]</p>
-<h1 id="01-通用文献阅读及规律"><a href="#01-通用文献阅读及规律" class="headerlink" title="01 通用文献阅读及规律"></a>01 通用文献阅读及规律</h1><h1 id="02-了解GEO数据库"><a href="#02-了解GEO数据库" class="headerlink" title="02 了解GEO数据库"></a>02 了解GEO数据库</h1><p>-</p>
-<h1 id="03-数据下载的3种方式-–-得到表达矩阵"><a href="#03-数据下载的3种方式-–-得到表达矩阵" class="headerlink" title="03 数据下载的3种方式 – 得到表达矩阵"></a>03 数据下载的3种方式 – 得到表达矩阵</h1><p>由于R语言版本高于3.5，需要用新的方式安装GEOquery</p>
+  </div><div class="post-content"><h1 id="01-通用文献阅读及规律"><a href="#01-通用文献阅读及规律" class="headerlink" title="01 通用文献阅读及规律"></a>01 通用文献阅读及规律</h1><h1 id="02-了解GEO数据库"><a href="#02-了解GEO数据库" class="headerlink" title="02 了解GEO数据库"></a>02 了解GEO数据库</h1><h1 id="03-数据下载的3种方式-–-得到表达矩阵"><a href="#03-数据下载的3种方式-–-得到表达矩阵" class="headerlink" title="03 数据下载的3种方式 – 得到表达矩阵"></a>03 数据下载的3种方式 – 得到表达矩阵</h1><p>由于R语言版本高于3.5，需要用新的方式安装GEOquery</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!requireNamespace(<span class="string">"BiocManager"</span>, quietly = <span class="literal">TRUE</span>))</span><br><span class="line">    install.packages(<span class="string">"BiocManager"</span>)</span><br><span class="line">BiocManager::install(version = <span class="string">"3.10"</span>)</span><br><span class="line">biocManager::install(<span class="string">"GEOquery"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获得表达矩阵的两种方式</span></span><br><span class="line"><span class="comment"># 1. getGEO</span></span><br><span class="line"><span class="comment"># eset这里是个对象,里面包括表达矩阵，芯片如何设计，样本如何分组等信息。 从这个列表中提取出表达矩阵，才能进行后续的操作</span></span><br><span class="line">eset&lt;-getGEO(<span class="string">"GSE42872"</span>,</span><br><span class="line">             destdir=<span class="string">"."</span>, <span class="comment">#下载在当前目录</span></span><br><span class="line">             getGPL=<span class="literal">F</span>,   <span class="comment"># 平台信息不要</span></span><br><span class="line">             AnnotGPL=<span class="literal">F</span>) <span class="comment"># 注释不要</span></span><br><span class="line"></span><br><span class="line">b1=exprs(eset[[<span class="number">1</span>]])   <span class="comment"># 提取表达矩阵</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 从网页里直接下载GEO文件，然后处理</span></span><br><span class="line"><span class="comment"># a是一个表达矩阵</span></span><br><span class="line">a=read.table(<span class="string">"GSE42872_series_matrix.txt.gz"</span>,</span><br><span class="line">             sep=<span class="string">"\t"</span>,quote=<span class="string">""</span>,fill=<span class="literal">T</span>,</span><br><span class="line">             comment.char=<span class="string">"!"</span>,header=<span class="literal">T</span>) <span class="comment">#不要注释信息，把第一行设置为header</span></span><br><span class="line"></span><br><span class="line">a[,<span class="number">1</span>] <span class="comment"># a的第一列</span></span><br><span class="line">rownames(a)=a[,<span class="number">1</span>]  <span class="comment">#把a的行名设为第一列的名字</span></span><br><span class="line">a=a[,-<span class="number">1</span>] <span class="comment">#去掉原来的第一列，也就是行名的那一列</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 这里b1和处理之后的a是完全相同的东西</span></span><br><span class="line"><span class="comment">## getGEO和GEOquery就是做了方法2的代码</span></span><br></pre></td></tr></table></figure>
 
 <ul>
@@ -115,38 +121,30 @@
 </ol>
 
       </div>
-      <div class="post-copyright">
-    <p class="copyright-item">
-      <span>Author: </span>
-      <a href="http://yoursite.com">Cedar</a>
-    </p>
-    <p class="copyright-item">
-      <span>Link: </span>
-      <a href="http://yoursite.com/2019/12/27/01 GEO数据挖掘/">http://yoursite.com/2019/12/27/01 GEO数据挖掘/</a>
-    </p>
-    <p class="copyright-item">
-      <span>License: </span><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-    </p>
-  </div>
+      
       <footer class="post-footer">
         <div class="post-tags">
-            <a href="/tags/bioinformatics/">bioinformatics</a>
-            <a href="/tags/流程/">流程</a>
+            <a href="/Cedarrr.github.io/tags/bioinformatics/">bioinformatics</a>
+            <a href="/Cedarrr.github.io/tags/流程/">流程</a>
             </div>
         
-        <nav class="post-nav"><a class="prev" href="/2019/12/27/markdown基础语法/">
+        <nav class="post-nav"><a class="prev" href="/Cedarrr.github.io/2020/01/10/生信入门阅读/">
         <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">markdown基础语法</span>
+        <span class="prev-text nav-default">生信入门阅读</span>
         <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    <a class="next" href="/Cedarrr.github.io/2019/12/27/markdown基础语法/">
+        <span class="next-text nav-default">markdown基础语法</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
       </a>
     </nav></footer>
     </article></div><div class="comments" id="comments"></div></div>
       </main>
 
-      <footer id="footer" class="footer"><div class="social-links"><a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
-        <a href="https://github.com/ahonn" class="iconfont icon-github" title="github"></a>
-        <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
-    </div><div class="copyright">
+      <footer id="footer" class="footer"><div class="social-links"><a href="mailto:mesliu97@gmail.com" class="iconfont icon-email" title="email"></a>
+        <a href="https://github.com/Cedarrr" class="iconfont icon-github" title="github"></a>
+        </div><div class="copyright">
   <span class="power-by">
     Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
   </span>
@@ -156,7 +154,7 @@
     <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
   </span>
 
-  <span class="copyright-year">&copy;2015 - 2020<span class="heart">
+  <span class="copyright-year">&copy;2019 - 2020<span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
     <span class="author">Cedar</span>
@@ -167,9 +165,9 @@
       <div class="back-to-top" id="back-to-top">
         <i class="iconfont icon-up"></i>
       </div>
-    </div><script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/src/even.js?v=2.11.0"></script>
+    </div><script type="text/javascript" src="/Cedarrr.github.io/lib/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/Cedarrr.github.io/lib/slideout/slideout.js"></script>
+  <script type="text/javascript" src="/Cedarrr.github.io/lib/fancybox/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/Cedarrr.github.io/js/src/even.js?v=2.11.0"></script>
 </body>
 </html>
