@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang>
+  <head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+<meta name="theme-color" content="#f8f5ec">
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="description" content="Python 进阶学习"><meta name="keywords" content="java, bioinformatics, python"><link rel="alternate" href="/Cedarrr.github.io/atom.xml" title="Cedar's blog"><link rel="shortcut icon" type="image/x-icon" href="/Cedarrr.github.io/icon2.png?v=2.11.0">
+<link rel="canonical" href="https://cedarrr.github.io/Cedarrr.github.io/2020/01/18/python进阶学习/">
+
+<link rel="stylesheet" type="text/css" href="/Cedarrr.github.io/lib/fancybox/jquery.fancybox.css">
+<link rel="stylesheet" type="text/css" href="/Cedarrr.github.io/css/style.css?v=2.11.0">
+
+<script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":true,"pjax":"","latex":false};
+</script>
+
+    <title>Python 进阶学习 - Cedar's blog</title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/Cedarrr.github.io/." class="logo">Cedar's blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list"><a href="/Cedarrr.github.io/">
+        <li class="mobile-menu-item">Home
+          </li>
+      </a><a href="/Cedarrr.github.io/tags/">
+        <li class="mobile-menu-item">Tags
+          </li>
+      </a></ul>
+</nav>
+<div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/Cedarrr.github.io/." class="logo">Cedar's blog</a>
+</div>
+
+<nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item">
+          <a class="menu-item-link" href="/Cedarrr.github.io/">
+            Home
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/Cedarrr.github.io/tags/">
+            Tags
+            </a>
+        </li>
+      </ul></nav>
+</header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content"><article class="post">
+    <header class="post-header">
+      <h1 class="post-title">Python 进阶学习
+        </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2020-01-18
+        </span></div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-基本知识"><span class="toc-text">1. 基本知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-解释器"><span class="toc-text">1.1 解释器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-用户输入"><span class="toc-text">1.2 用户输入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-pycharm"><span class="toc-text">1.3 pycharm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-用户输入"><span class="toc-text">1.4 用户输入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-模块初识"><span class="toc-text">1.5 模块初识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-pyc文件"><span class="toc-text">1.6 pyc文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-7-基础的代码"><span class="toc-text">1.7 基础的代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2"><span class="toc-text">2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-装饰器"><span class="toc-text">2.1 装饰器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-迭代器与生成器"><span class="toc-text">2.2 迭代器与生成器</span></a></li></ol></li></ol>
+    </div>
+  </div><div class="post-content"><h1 id="1-基本知识"><a href="#1-基本知识" class="headerlink" title="1. 基本知识"></a>1. 基本知识</h1><h2 id="1-1-解释器"><a href="#1-1-解释器" class="headerlink" title="1.1 解释器"></a>1.1 解释器</h2><p>python解释器在加载.py文件中的代码时，会对内容进行编码（默认ascill)，所以需要在代码中加入使用utf-8解释器的代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*- </span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">print</span>` `<span class="string">"你好，世界"</span></span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<h2 id="1-2-用户输入"><a href="#1-2-用户输入" class="headerlink" title="1.2 用户输入"></a>1.2 用户输入</h2><p>注意在python2.x中尽量使用raw_input因为它会自动把用户的输入的东西存为str的格式，相当于python3当中的input。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#raw_input仅仅只在python2.x里面有用</span></span><br><span class="line">name = raw_input(<span class="string">"What is your name?"</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-3-pycharm"><a href="#1-3-pycharm" class="headerlink" title="1.3 pycharm"></a>1.3 pycharm</h2><p>设置每次创建新py文件的模板<br><code>view-&gt;appearance-&gt;toolbar</code>，点击出现菜单里面的扳手符号。<code>editor-&gt;file and code templates</code></p>
+<h2 id="1-4-用户输入"><a href="#1-4-用户输入" class="headerlink" title="1.4 用户输入"></a>1.4 用户输入</h2><p>这个代码不能在pycharm环境下使用，但在cmd中是可以的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python </span></span><br><span class="line"><span class="comment">#_*_coding:utf-8_*_</span></span><br><span class="line"><span class="keyword">import</span> getpass</span><br><span class="line"></span><br><span class="line">name = raw_input(<span class="string">"What is your name?"</span>)</span><br><span class="line">pwd=getpass.getpass(<span class="string">"password:"</span>)</span><br><span class="line">print(<span class="string">"Hello "</span> + name )</span><br><span class="line">print(pwd)</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-5-模块初识"><a href="#1-5-模块初识" class="headerlink" title="1.5 模块初识"></a>1.5 模块初识</h2><ul>
+<li>创建的文件名不可以与导入的库名相同，例如创建的文件叫<code>sys</code>那么在<code>import sys</code>的时候，会先在当前目录下寻找，就找到了自己创建的文件。在python2.x里会报错，但python3.x好像已经修复了这个问题。但尽量还是不要使用。</li>
+</ul>
+<p>sys模块</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印环境变量</span></span><br><span class="line">print(sys.path)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在pycharm中打印绝对路径</span></span><br><span class="line"><span class="comment"># 如果是在cmd下面，打印文件名并以列表中的一项这种形式出现</span></span><br><span class="line"><span class="comment"># python sys_mod.py 1 2 3</span></span><br><span class="line"><span class="comment"># 结果会出现['sys_mod.py','1','2','3']</span></span><br><span class="line"><span class="comment"># print(sys.argv[2])则会取出2这个字符</span></span><br><span class="line">print(sys.argv)</span><br></pre></td></tr></table></figure>
+
+<p>os模块： 实现与系统的交互</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 实现与系统的交互</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">os.system(<span class="string">"dir"</span>) <span class="comment"># os.system 执行命令，不保存结果</span></span><br><span class="line">os.popen(<span class="string">"dir"</span>) <span class="comment"># os.popen执行命令，并把结果存在一个地址，会返回地址</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="1-6-pyc文件"><a href="#1-6-pyc文件" class="headerlink" title="1.6 pyc文件"></a>1.6 pyc文件</h2><p><code>lib/_pycache_</code>文件夹中会存放pyc文件</p>
+<p><strong>编译型语言</strong>：C语言。就是在程序执行之前，会先同各国编译器对程序执行一个编译的过程，把程序转变为机器语言，运行时就不需要编译，速度更快。<br><strong>解释型语言</strong>：Python, Ruby。没有编译的过程，而是在程序运行的时候，通过解释器对程序逐行做出解释，然后直接运行。</p>
+<p>随着Java等基于虚拟机的语言的兴起，语言不可以再被直接分为解释型和编译型这两种。以Java为例，Java首先是通过编译器编译成字节码文件，然后在运行时通过解释器给解释成机器文件，所以说Java是一种先编译后解释的语言。</p>
+<p>在命令行中输入<code>python hello.py</code>的时候，其实是激活了Python的解释器告诉解释器要开始工作了。可是在“解释之前”执行的第一项工作其实和java是一样的，就是编译。</p>
+<p><strong>python的运行过程</strong><br>当python程序运行的时候，编译的结果是保存在位于内存中的PyCodeObject中，当python程序运行结束时，python解释器九江PyCodeObject写回到pyc文件中。<br>当Python二次运行的时候，程序会先在硬盘中寻找pyc文件，如果找到，就直接写入否则就重复上面的过程。在找到pyc文件的同时，还会比较代码和pyc文件的更新时间，如果不一致还是会重复上述过程<strong>所以pyc文件其实似乎PyCodeObject的一种持久化保存方式。</strong></p>
+<h2 id="1-7-基础的代码"><a href="#1-7-基础的代码" class="headerlink" title="1.7 基础的代码"></a>1.7 基础的代码</h2><ol>
+<li><p>列表的复制要用<code>list_name.copy()</code>而不要直接<code>new_list=old_list</code>。</p>
+</li>
+<li><p>字典的多级目录</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">data=&#123;</span><br><span class="line">    <span class="string">'new york'</span>:&#123;</span><br><span class="line">        <span class="string">'university'</span>:&#123;</span><br><span class="line">            <span class="string">'fashion'</span>:[<span class="string">"left"</span>,<span class="string">"right"</span>]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">'uk'</span>:&#123;</span><br><span class="line">        <span class="string">"london"</span>:[<span class="string">"kings cross station"</span>]</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">print(data[<span class="string">'new york'</span>][<span class="string">"university"</span>][<span class="string">"boston"</span>][<span class="number">0</span>])  <span class="comment">## 打印结果是left</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>函数</p>
+</li>
+</ol>
+<ul>
+<li><strong>匿名函数</strong> ：就是不需要显式的指定函数</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 普通函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calc</span><span class="params">(n)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> n**n</span><br><span class="line">print(calc(<span class="number">10</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 匿名函数</span></span><br><span class="line">calc=<span class="keyword">lambda</span> n::n**n</span><br><span class="line">print(calc(<span class="number">10</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 匿名函数一般会搭配其他的函数使用</span></span><br><span class="line">res=map(<span class="keyword">lambda</span> x:x**<span class="number">2</span>,[<span class="number">1</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">4</span>,<span class="number">8</span>])</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> res:</span><br><span class="line">	print(i)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><strong>递归函数</strong>： 在函数内部调用自己的函数</p>
+<ul>
+<li>递归必须有一个明确的结束条件</li>
+<li>每次进入更深一层递归时，问题规模比上次递归都应有所减少</li>
+<li>递归效率不高，递归层次过多会导致栈溢出（在计算机中，函数调用是通过栈（stack）这种数据结构实现的，每当进入一个函数调用，栈就会加一层栈帧，每当函数返回，栈就会减一层栈帧。由于栈的大小不是无限的，所以，递归调用的次数过多，会导致栈溢出）</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calc</span><span class="params">(n)</span>:</span></span><br><span class="line">    print(n)</span><br><span class="line">    <span class="keyword">if</span> int(n/<span class="number">2</span>)&gt;<span class="number">0</span>:    <span class="comment"># 这里必须要加int， 要不出现小数就永元不会达到这个条件</span></span><br><span class="line">        <span class="keyword">return</span> calc(n/<span class="number">2</span>)</span><br><span class="line">    <span class="keyword">else</span>: <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">calc(<span class="number">8</span>)</span><br></pre></td></tr></table></figure>
+
+<p>递归应用于二分查找法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">binary_search</span><span class="params">(dataset, find_num)</span>:</span></span><br><span class="line">    print(dataset)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> len(dataset) &gt; <span class="number">1</span>:</span><br><span class="line">        mid = int(len(dataset) / <span class="number">2</span>)</span><br><span class="line">        <span class="keyword">if</span> dataset[mid] == find_num:  <span class="comment"># find it</span></span><br><span class="line">            print(<span class="string">"找到数字"</span>, dataset[mid])</span><br><span class="line">        <span class="keyword">elif</span> dataset[mid] &gt; find_num:  <span class="comment"># 找的数在mid左面</span></span><br><span class="line">            print(<span class="string">"\033[31;1m找的数在mid[%s]左面\033[0m"</span> % dataset[mid])</span><br><span class="line">            <span class="keyword">return</span> binary_search(dataset[<span class="number">0</span>:mid], find_num)</span><br><span class="line">        <span class="keyword">else</span>:  <span class="comment"># 找的数在mid右面</span></span><br><span class="line">            print(<span class="string">"\033[32;1m找的数在mid[%s]右面\033[0m"</span> % dataset[mid])</span><br><span class="line">            <span class="keyword">return</span> binary_search(dataset[mid + <span class="number">1</span>:], find_num)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">if</span> dataset[<span class="number">0</span>] == find_num:  <span class="comment"># find it</span></span><br><span class="line">            print(<span class="string">"找到数字啦"</span>, dataset[<span class="number">0</span>])</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(<span class="string">"没的分了,要找的数字[%s]不在列表里"</span> % find_num)</span><br><span class="line"></span><br><span class="line">data = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">12</span>, <span class="number">14</span>, <span class="number">16</span>, <span class="number">17</span>, <span class="number">18</span>, <span class="number">20</span>, <span class="number">21</span>, <span class="number">22</span>, <span class="number">23</span>, <span class="number">30</span>, <span class="number">32</span>, <span class="number">33</span>, <span class="number">35</span>]</span><br><span class="line">binary_search(data, <span class="number">66</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>高阶函数</strong>：一个函数可以接收另一个函数作为参数，这种函数就称之为高阶函数。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x,y,f)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> f(x)+f(y)</span><br><span class="line"></span><br><span class="line">res=add(<span class="number">3</span>,<span class="number">-6</span>,abs)</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><h2 id="2-1-装饰器"><a href="#2-1-装饰器" class="headerlink" title="2.1 装饰器"></a>2.1 装饰器</h2><p><strong>装饰器：</strong></p>
+<p><strong>定义</strong>：本质是函数，关键语法都是用def定义的。是用来装饰其他函数，为其他函数添加附加功能。<br><strong>原则</strong>：1. 不能修改被装饰的函数的源代码。2. 不能修改被装饰的函数的调用方式。也就是装饰器对被修改的函数是完全透明的。</p>
+<p><strong>实现装饰器的知识储备</strong>：高阶函数+嵌套函数-》装饰器</p>
+<ol>
+<li>函数即“变量”</li>
+<li>高阶函数</li>
+<li>嵌套函数</li>
+</ol>
+<ol>
+<li><p>函数即变量<br>函数就像变量一样，当创建函数的时候，就在内存中划分一个空间装函数体，函数名就相当于变量名是个门牌号。<br>python中的内存回收机制是当没有门牌号的时候，里面的值就会被清空。匿名函数没有函数名，所以立刻会被回收。但如果匿名函数赋给给某个值，就相当于给予了门牌号。</p>
+</li>
+<li><p>高阶函数</p>
+<ul>
+<li>把一个函数名当作实参传给另外一个函数 （在步修改被装饰函数源代码的情况下为其添加功能）</li>
+<li>返回值中包含函数名</li>
+</ul>
+</li>
+</ol>
+<p>理解装饰器的作用方法.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bar</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"in the bar"</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test1</span><span class="params">(func)</span>:</span></span><br><span class="line">    print(func)</span><br><span class="line">    <span class="keyword">return</span> func</span><br><span class="line">    </span><br><span class="line"><span class="comment">#print(test1(bar)) # 注意这里要传bar而非bar(),因为bar是门牌号</span></span><br><span class="line">				   <span class="comment"># 而bar()是bar这个函数的运行结果，如果传bar()</span></span><br><span class="line">				   <span class="comment"># 那么传给test1的就不是函数了</span></span><br><span class="line">bar=test1(bar) <span class="comment">#这里就相当于改写了门牌号bar指向的地址</span></span><br><span class="line">bar()</span><br><span class="line"><span class="comment"># output</span></span><br><span class="line"><span class="comment">#&lt;function bar at 0x02BFE7C0&gt;</span></span><br><span class="line"><span class="comment">#&lt;function bar at 0x02BFE7C0&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>嵌套函数<br>函数的嵌套是在一个函数内容，def一个新的函数，而不只是单纯的调用某个函数。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"in the foo"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">bar</span><span class="params">()</span>:</span>    <span class="comment"># 这个函数具有局部变量的特性，不能在外部被调用。</span></span><br><span class="line">        print(<span class="string">"in the bar"</span>)</span><br><span class="line">    bar()</span><br><span class="line">foo()</span><br></pre></td></tr></table></figure>
+
+<p>当没有参数的时候，装饰器的使用</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">timer</span><span class="params">(func)</span>:</span> <span class="comment">#timer(test1)    func=test1</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">timer2</span><span class="params">()</span>:</span></span><br><span class="line">        start_time=time.time()</span><br><span class="line">        func() <span class="comment"># run test1()</span></span><br><span class="line">        end_time=time.time()</span><br><span class="line">        print(<span class="string">"the func run time is %s"</span>%(end_time-start_time))</span><br><span class="line">    <span class="keyword">return</span> timer2 <span class="comment"># 返回地址</span></span><br><span class="line"><span class="meta">@timer</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test1</span><span class="params">()</span>:</span></span><br><span class="line">    time.sleep(<span class="number">3</span>)</span><br><span class="line">    print(<span class="string">"in the test1"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 把地址赋给这个原来的门牌号</span></span><br><span class="line"><span class="comment"># @timer写在上面就相当于这一步</span></span><br><span class="line"><span class="comment"># test1=timer(test1)</span></span><br><span class="line"></span><br><span class="line">test1() <span class="comment"># 这里实际上是在执行timer2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#output</span></span><br><span class="line"><span class="comment">#in the test1</span></span><br><span class="line"><span class="comment">#the func run time is 3.0004637241363525</span></span><br></pre></td></tr></table></figure>
+
+<p>非固定参数，装饰器。<code>*args, **kwargs</code>是非固定参数，此时，不管被修饰的函数有几个参数，都可以使用了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">timer</span><span class="params">(func)</span>:</span> <span class="comment">#timer(test1)    func=test1</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">timer2</span><span class="params">(*args,**kwargs)</span>:</span> <span class="comment"># *args, **kwargs是非固定参数</span></span><br><span class="line">        start_time=time.time()</span><br><span class="line">        func(*args,**kwargs) <span class="comment"># run test1()</span></span><br><span class="line">        end_time=time.time()</span><br><span class="line">        print(<span class="string">"the func run time is %s"</span>%(end_time-start_time))</span><br><span class="line">    <span class="keyword">return</span> timer2 <span class="comment"># 返回地址</span></span><br><span class="line"><span class="meta">@timer</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test1</span><span class="params">()</span>:</span></span><br><span class="line">    time.sleep(<span class="number">3</span>)</span><br><span class="line">    print(<span class="string">"in the test1"</span>)</span><br><span class="line"><span class="meta">@timer  # test2=timer(test2)=timer2     test2(name)=timer2(name)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test2</span><span class="params">(name)</span>:</span></span><br><span class="line">    print(<span class="string">"test2"</span>,name)</span><br></pre></td></tr></table></figure>
+
+<p>进阶版，根据不同的页面，用不同的方式进行验证</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">user,passwd=<span class="string">"alex"</span>,<span class="string">"abc123"</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">auth</span><span class="params">(auth_type)</span>:</span></span><br><span class="line">    <span class="comment">#print("auth func",auth_type)</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">outer_wrapper</span><span class="params">(func)</span>:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">(*args, **kwargs)</span>:</span></span><br><span class="line">            <span class="comment">#print("auth func args",*args, **kwargs)</span></span><br><span class="line"></span><br><span class="line">            username = input(<span class="string">"Username:"</span>).strip()</span><br><span class="line">            password = input(<span class="string">"Password:"</span>).strip()</span><br><span class="line">            <span class="keyword">if</span> auth_type == <span class="string">"local"</span>:</span><br><span class="line">                <span class="keyword">if</span> user == username <span class="keyword">and</span> passwd == password:</span><br><span class="line">                    print(<span class="string">"\033[32:1mUser has passed authentication\033[Om"</span>)  <span class="comment"># 以绿色的颜色打印一句登陆成功的提示语</span></span><br><span class="line">                    res = func(*args, **kwargs)  <span class="comment"># 这就就相当于func在执行，但由于这个值没有传递给任何变量，所以如果原func是有返回值的</span></span><br><span class="line">                    <span class="comment"># 在这里就会丢失，所以需要在这里把res赋值</span></span><br><span class="line">                    print(<span class="string">"---after authentication"</span>)</span><br><span class="line">                    <span class="keyword">return</span> res</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    exit(<span class="string">"\033[31:1mInvalid username or passwd\033[Om"</span>)  <span class="comment"># 以红色的颜色打印一句登陆成功的提示语</span></span><br><span class="line">            <span class="keyword">elif</span> auth_type==<span class="string">"ldap"</span>:</span><br><span class="line">                print(<span class="string">"get ldap"</span>)</span><br><span class="line">        <span class="keyword">return</span> wrapper</span><br><span class="line">    <span class="keyword">return</span> outer_wrapper</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"Welcome to index page"</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@auth(auth_type="local")  #希望实现home页面用本地的文件验证</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">home</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"welcome to home page"</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"from home"</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@auth(auth_type="ldap")  # bbs用ldap的方法验证</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bbs</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"welcome to bbs page"</span>)</span><br><span class="line"></span><br><span class="line">index()</span><br><span class="line">print(home()) <span class="comment"># 在这里调用hone，相当于调用wrapper</span></span><br><span class="line">bbs()</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-2-迭代器与生成器"><a href="#2-2-迭代器与生成器" class="headerlink" title="2.2 迭代器与生成器"></a>2.2 迭代器与生成器</h2><p><strong>Reference:</strong></p>
+<ol>
+<li>课程网页：<a href="https://www.cnblogs.com/alex3714/articles/5465198.html" target="_blank" rel="noopener">https://www.cnblogs.com/alex3714/articles/5465198.html</a></li>
+</ol>
+
+      </div>
+      
+      <footer class="post-footer">
+        <div class="post-tags">
+            <a href="/Cedarrr.github.io/tags/python/">python</a>
+            </div>
+        
+        <nav class="post-nav"><a class="next" href="/Cedarrr.github.io/2020/01/12/NGS-Reading/">
+        <span class="next-text nav-default">NGS Reading</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    </nav></footer>
+    </article></div><div class="comments" id="comments"></div></div>
+      </main>
+
+      <footer id="footer" class="footer"><div class="social-links"><a href="mailto:mesliu97@gmail.com" class="iconfont icon-email" title="email"></a>
+        <a href="https://github.com/Cedarrr" class="iconfont icon-github" title="github"></a>
+        </div><div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">&copy;2019 - 2020<span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Cedar</span>
+  </span>
+</div>
+</footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div><script type="text/javascript" src="/Cedarrr.github.io/lib/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/Cedarrr.github.io/lib/slideout/slideout.js"></script>
+  <script type="text/javascript" src="/Cedarrr.github.io/lib/fancybox/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/Cedarrr.github.io/js/src/even.js?v=2.11.0"></script>
+</body>
+</html>
