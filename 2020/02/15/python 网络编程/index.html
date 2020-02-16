@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang>
+  <head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+<meta name="theme-color" content="#f8f5ec">
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="description" content="python 网络编程"><meta name="keywords" content="java, bioinformatics, python"><link rel="alternate" href="/Cedarrr.github.io/atom.xml" title="Cedar's blog"><link rel="shortcut icon" type="image/x-icon" href="/Cedarrr.github.io/icon2.png?v=2.11.0">
+<link rel="canonical" href="https://cedarrr.github.io/Cedarrr.github.io/2020/02/15/python 网络编程/">
+
+<link rel="stylesheet" type="text/css" href="/Cedarrr.github.io/lib/fancybox/jquery.fancybox.css">
+<link rel="stylesheet" type="text/css" href="/Cedarrr.github.io/css/style.css?v=2.11.0">
+
+<script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":true,"pjax":"","latex":false};
+</script>
+
+    <title>python 网络编程 - Cedar's blog</title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/Cedarrr.github.io/." class="logo">Cedar's blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list"><a href="/Cedarrr.github.io/">
+        <li class="mobile-menu-item">Home
+          </li>
+      </a><a href="/Cedarrr.github.io/tags/">
+        <li class="mobile-menu-item">Tags
+          </li>
+      </a></ul>
+</nav>
+<div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/Cedarrr.github.io/." class="logo">Cedar's blog</a>
+</div>
+
+<nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item">
+          <a class="menu-item-link" href="/Cedarrr.github.io/">
+            Home
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/Cedarrr.github.io/tags/">
+            Tags
+            </a>
+        </li>
+      </ul></nav>
+</header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content"><article class="post">
+    <header class="post-header">
+      <h1 class="post-title">python 网络编程
+        </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2020-02-15
+        </span></div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-基本概念"><span class="toc-text">1. 基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-网络通信概述"><span class="toc-text">1.1 网络通信概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-IP地址"><span class="toc-text">1.2 IP地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-windows查看网卡信息"><span class="toc-text">1.3 windows查看网卡信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-ip地址的分类-ipv4和ipv6介绍"><span class="toc-text">1.4 ip地址的分类-ipv4和ipv6介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-重点-端口-desk-port"><span class="toc-text">1.5 (重点)端口 desk port</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-端口分类：知名端口，动态端口"><span class="toc-text">1.6 端口分类：知名端口，动态端口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-7-socket-介绍"><span class="toc-text">1.7 socket 介绍</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-udp"><span class="toc-text">2. udp</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-udp发送数据demo"><span class="toc-text">2.1 udp发送数据demo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-关闭VMware的虚拟网卡（了解）"><span class="toc-text">2.2 关闭VMware的虚拟网卡（了解）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-udp发送数据的强调"><span class="toc-text">2.3 udp发送数据的强调</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-（重点）运行python程序以及python交互模式，encode编码，发送udp的练习"><span class="toc-text">2.4 （重点）运行python程序以及python交互模式，encode编码，发送udp的练习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-（重点）接收udp数据"><span class="toc-text">2.5 （重点）接收udp数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-（重点）端口绑定的问题"><span class="toc-text">2.6 （重点）端口绑定的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-7-网络中重要概念复习"><span class="toc-text">2.7 网络中重要概念复习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-8-输入对方ip、port、全双工、半双工、单工等"><span class="toc-text">2.8 输入对方ip、port、全双工、半双工、单工等</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-9-案例：udp聊天器"><span class="toc-text">2.9 案例：udp聊天器</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-tcp客户端"><span class="toc-text">3. tcp客户端</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-tcp介绍"><span class="toc-text">3.1 tcp介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-（重点）tcp客户端"><span class="toc-text">3.2 （重点）tcp客户端</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-tcp服务器"><span class="toc-text">4. tcp服务器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-tcp下载文件"><span class="toc-text">5. tcp下载文件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-案例：下载文件"><span class="toc-text">5.1 案例：下载文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-只是点快速总结，listen里的参数"><span class="toc-text">5.2 只是点快速总结，listen里的参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-QQ不绑定端口，知识点复习"><span class="toc-text">5.3 QQ不绑定端口，知识点复习</span></a></li></ol></li></ol>
+    </div>
+  </div><div class="post-content"><h1 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h1><h2 id="1-1-网络通信概述"><a href="#1-1-网络通信概述" class="headerlink" title="1.1 网络通信概述"></a>1.1 网络通信概述</h2><p>主要分为udp和tcp， udp比较简单，tcp比较难</p>
+<p>** 网络**就是一种辅助双方或者多方能够连接在一起的工具</p>
+<p><strong>使用网络的目的</strong>：数据交换<br>就是为了联通多方然后进行通信用的，即把数据从以放传递给另一方。以前学习编写的程序都是单机的，即不能和其他电脑上的程序进行通讯。为了让不同的电脑运行的软件，之间能够互相传递数据，就需要借助网络的功能。</p>
+<a id="more"></a>
+<p><strong>所谓的网络编程就是让不同的电脑上的软件能够进行数据传递，即进程之间的通信。</strong><br>![1-1 不同主机通信](D:\blog\hexoblog\source_posts\python-03-网络编程\1-1 不同主机通信.JPG)</p>
+<h2 id="1-2-IP地址"><a href="#1-2-IP地址" class="headerlink" title="1.2 IP地址"></a>1.2 IP地址</h2><p><strong>ip地址</strong>：类似于192.168.1.1这种，用于标记网络上的一台电脑。标记数据给谁，ip地址相当于收件地址。在本地局域网内是唯一的。<br>![1-2 ip地址](D:\blog\hexoblog\source_posts\python-03-网络编程\1-2 ip地址.JPG)</p>
+<h2 id="1-3-windows查看网卡信息"><a href="#1-3-windows查看网卡信息" class="headerlink" title="1.3 windows查看网卡信息"></a>1.3 windows查看网卡信息</h2><p>linux： <code>ifconfig</code><br>  关闭网卡：<code>sudo ifconfig 查看得到的出了lo之外的名字 down</code><br>  开启网卡：<code>sudo ifconfig ens40 up</code><br>win+R: 搜索cmd，进入输入<code>ipconfig</code></p>
+<h2 id="1-4-ip地址的分类-ipv4和ipv6介绍"><a href="#1-4-ip地址的分类-ipv4和ipv6介绍" class="headerlink" title="1.4 ip地址的分类-ipv4和ipv6介绍"></a>1.4 ip地址的分类-ipv4和ipv6介绍</h2><p><strong>ip v4</strong>: ip version 4, ip网络标记的第4个版本。特征 <strong>xxxx.xxx.xxx.xxx</strong>每个位置最大位256。总共用256*256*256*256个版本。但目前已经没有ipv4的地址号。<br><strong>ip v6</strong>: 但目前还没有在主流中使用，因为使用ipv6的话，需要修改很多之前已经建设过的东西。</p>
+<p>目前所讲的ip地址一般还是指ipv4，之后笔记中所提到的ip相关知识也是ipv4相关。</p>
+<p><strong>ip地址的组成</strong><br>192.168.33.xx: 用2进制表示，那每一位有8个位置。</p>
+<p>A类：第一位0开头，第一位是网络号，后三位是主机号。<br>B类： 第一位10开头，前两个是网络号，后两个是主机号。<br><strong>C类</strong>： 第一位110开头，前三个是网络号，后一个是主机号。网络号相同才能互相传输消息。这样总共有254个主机号（0与2不可以使用）。这样明显是不够用的。C类是最常用的。<br>D类：第一位1110开头，是专门保留的地址，多倍用在多点广播(multicast)中。<br>![1-3 ip地址的分类](D:\blog\hexoblog\source_posts\python-03-网络编程\1-3 ip地址的分类.JPG)</p>
+<h2 id="1-5-重点-端口-desk-port"><a href="#1-5-重点-端口-desk-port" class="headerlink" title="1.5 (重点)端口 desk port"></a>1.5 (重点)端口 desk port</h2><p><strong>ip地址用于确认电脑，端口用于确认进程（即哪一个程序）。</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dest ip:<span class="number">192.168</span><span class="number">.1</span><span class="number">.2</span>  <span class="comment">#目的ip</span></span><br><span class="line">src ip: <span class="number">192.168</span><span class="number">.1</span><span class="number">.1</span>  <span class="comment">#源ip，用于回复信息</span></span><br><span class="line">desk port：<span class="number">7788</span> <span class="comment">#目标端口</span></span><br><span class="line">src port: <span class="number">4567</span>  <span class="comment">#源端口，用于回复信息</span></span><br><span class="line">content:你好啊</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-6-端口分类：知名端口，动态端口"><a href="#1-6-端口分类：知名端口，动态端口" class="headerlink" title="1.6 端口分类：知名端口，动态端口"></a>1.6 端口分类：知名端口，动态端口</h2><p><strong>进程</strong>是运行之后的程序。</p>
+<p>端口主要分为<strong>知名端口</strong>和<strong>动态端口</strong><br><strong>知名端口（well known prots）</strong>: 是众所周知的端口号，范围从0到1023。类似于报警打110，救护车打112这种，大家都知道的号码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">80</span>端口分配给HTTP服务</span><br><span class="line"><span class="number">21</span>端口分配给FTP服务</span><br></pre></td></tr></table></figure>
+
+<p><strong>动态端口</strong>：范围从1024到65535。它一般不固定分配某种服务，而是动态分配。<br>  <strong>动态分配</strong>是指当一个系统程序或应用程序需要网络通信时，它向主机申请一个端口，主机从可用的端口号中分配一个供它使用。当这个程序关闭时，同时也就释放了所占用的端口号。</p>
+<h2 id="1-7-socket-介绍"><a href="#1-7-socket-介绍" class="headerlink" title="1.7 socket 介绍"></a>1.7 socket 介绍</h2><p>在一台电脑上可以通过进程号（PID）来唯一标识一个进程，但是在网络中这是行不通的。其实<strong>TCP/IP协议族</strong>已经帮我么解决了这个问题，网络层的“ip地址”可以唯一标识网络中的主机，而传输层的“协议+端口”可以唯一标识主机中的应用进程。利用<strong>ip地址+协议+端口</strong>就可以标识网络进程了，网络中的进程通信就可以利用这个标志与其他进程进行交互。</p>
+<p><strong>socket（套接字）</strong>是进程间通信的一种方式，它与其他进程间通信的一个主要不同是：它能实现不同主机间的进程间通信，我们网络上各种各样的服务大多都是基于Socket来完成通信的。例如网页，QQ聊天，收发email等。</p>
+<p>在python中，使用socket模块的函数socket就可以完成：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line">socket.socket(AddressFamily(标记ipv4),Type(udp还是tcp))</span><br></pre></td></tr></table></figure>
+
+<p>说明：</p>
+<ul>
+<li><strong>AddressFamily</strong>: 可以选择AF_INET(用于Internet进程间通信)或者AF_UNIX(用于同一台机器进程间通信），实际工作中常用AF_INET</li>
+<li><strong>Type</strong>: 套接字类型，可以是SOCK_STREAM（ 流式套接字，主要用于TCP协议）或者SOCK_DGRAM（数据报套接字，主要用于UDP协议）</li>
+</ul>
+<p>创建一个tcp socket</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line"><span class="comment">#创建tcp的套接字</span></span><br><span class="line">s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)</span><br><span class="line"></span><br><span class="line"><span class="comment"># ...这里时使用套接字的功能（省略）</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 不用的时候，关闭套接字</span></span><br><span class="line">s.close()</span><br></pre></td></tr></table></figure>
+
+<p>创建一个udp socket</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建udp套接字</span></span><br><span class="line">s = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 这里是使用套接字的功能（省略）</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 不用的时候，关闭套接字</span></span><br><span class="line">s.close()</span><br></pre></td></tr></table></figure>
+
+<p>说明：</p>
+<ul>
+<li>套接字使用流程与文件的使用流程类似：创建，使用它收发数据，关闭套接字</li>
+</ul>
+<h1 id="2-udp"><a href="#2-udp" class="headerlink" title="2. udp"></a>2. udp</h1><h2 id="2-1-udp发送数据demo"><a href="#2-1-udp发送数据demo" class="headerlink" title="2.1 udp发送数据demo"></a>2.1 udp发送数据demo</h2><h2 id="2-2-关闭VMware的虚拟网卡（了解）"><a href="#2-2-关闭VMware的虚拟网卡（了解）" class="headerlink" title="2.2 关闭VMware的虚拟网卡（了解）"></a>2.2 关闭VMware的虚拟网卡（了解）</h2><h2 id="2-3-udp发送数据的强调"><a href="#2-3-udp发送数据的强调" class="headerlink" title="2.3 udp发送数据的强调"></a>2.3 udp发送数据的强调</h2><h2 id="2-4-（重点）运行python程序以及python交互模式，encode编码，发送udp的练习"><a href="#2-4-（重点）运行python程序以及python交互模式，encode编码，发送udp的练习" class="headerlink" title="2.4 （重点）运行python程序以及python交互模式，encode编码，发送udp的练习"></a>2.4 （重点）运行python程序以及python交互模式，encode编码，发送udp的练习</h2><h2 id="2-5-（重点）接收udp数据"><a href="#2-5-（重点）接收udp数据" class="headerlink" title="2.5 （重点）接收udp数据"></a>2.5 （重点）接收udp数据</h2><h2 id="2-6-（重点）端口绑定的问题"><a href="#2-6-（重点）端口绑定的问题" class="headerlink" title="2.6 （重点）端口绑定的问题"></a>2.6 （重点）端口绑定的问题</h2><h2 id="2-7-网络中重要概念复习"><a href="#2-7-网络中重要概念复习" class="headerlink" title="2.7 网络中重要概念复习"></a>2.7 网络中重要概念复习</h2><h2 id="2-8-输入对方ip、port、全双工、半双工、单工等"><a href="#2-8-输入对方ip、port、全双工、半双工、单工等" class="headerlink" title="2.8 输入对方ip、port、全双工、半双工、单工等"></a>2.8 输入对方ip、port、全双工、半双工、单工等</h2><h2 id="2-9-案例：udp聊天器"><a href="#2-9-案例：udp聊天器" class="headerlink" title="2.9 案例：udp聊天器"></a>2.9 案例：udp聊天器</h2><h1 id="3-tcp客户端"><a href="#3-tcp客户端" class="headerlink" title="3. tcp客户端"></a>3. tcp客户端</h1><h2 id="3-1-tcp介绍"><a href="#3-1-tcp介绍" class="headerlink" title="3.1 tcp介绍"></a>3.1 tcp介绍</h2><h2 id="3-2-（重点）tcp客户端"><a href="#3-2-（重点）tcp客户端" class="headerlink" title="3.2 （重点）tcp客户端"></a>3.2 （重点）tcp客户端</h2><h1 id="4-tcp服务器"><a href="#4-tcp服务器" class="headerlink" title="4. tcp服务器"></a>4. tcp服务器</h1><h1 id="5-tcp下载文件"><a href="#5-tcp下载文件" class="headerlink" title="5. tcp下载文件"></a>5. tcp下载文件</h1><h2 id="5-1-案例：下载文件"><a href="#5-1-案例：下载文件" class="headerlink" title="5.1 案例：下载文件"></a>5.1 案例：下载文件</h2><h2 id="5-2-只是点快速总结，listen里的参数"><a href="#5-2-只是点快速总结，listen里的参数" class="headerlink" title="5.2 只是点快速总结，listen里的参数"></a>5.2 只是点快速总结，listen里的参数</h2><h2 id="5-3-QQ不绑定端口，知识点复习"><a href="#5-3-QQ不绑定端口，知识点复习" class="headerlink" title="5.3 QQ不绑定端口，知识点复习"></a>5.3 QQ不绑定端口，知识点复习</h2>
+      </div>
+      
+      <footer class="post-footer">
+        
+        <nav class="post-nav"><a class="prev" href="/Cedarrr.github.io/2020/02/16/python-03-网络编程/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">python 03 网络编程</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    <a class="next" href="/Cedarrr.github.io/2020/02/09/UI设计学习/">
+        <span class="next-text nav-default">UI设计学习</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    </nav></footer>
+    </article></div><div class="comments" id="comments"></div></div>
+      </main>
+
+      <footer id="footer" class="footer"><div class="social-links"><a href="mailto:mesliu97@gmail.com" class="iconfont icon-email" title="email"></a>
+        <a href="https://github.com/Cedarrr" class="iconfont icon-github" title="github"></a>
+        </div><div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">&copy;2019 - 2020<span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Cedar</span>
+  </span>
+</div>
+</footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div><script type="text/javascript" src="/Cedarrr.github.io/lib/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/Cedarrr.github.io/lib/slideout/slideout.js"></script>
+  <script type="text/javascript" src="/Cedarrr.github.io/lib/fancybox/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/Cedarrr.github.io/js/src/even.js?v=2.11.0"></script>
+</body>
+</html>
